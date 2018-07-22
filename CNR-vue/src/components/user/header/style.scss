@@ -1,0 +1,13 @@
+@import "@/lib/reset.scss";
+.user{   
+    @include font-size(0.20rem);
+    img{
+        @include rect(auto, 0.4rem);
+        float: left;
+        margin: 0.05rem 0.1rem 0 0.05rem;
+    }
+    span{
+        float: left;
+    }
+}
+    

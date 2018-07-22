@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>首页</title>
+		<meta name="referrer" content="no-referrer">
+		<link rel = 'stylesheet' href = '/bootstrap/css/bootstrap.min.css' />
+		<link rel = 'stylesheet' href = '/stylesheets/font-awesome.min.css' />
+		<link rel = 'stylesheet' href = '/stylesheets/ionicons.min.css' />
+		<link rel = 'stylesheet' href = '/admin-lte/dist/css/AdminLTE.min.css' />
+		<link rel = 'stylesheet' href = '/admin-lte/dist/css/skins/skin-blue.min.css' />
+	</head>
+	<body class="hold-transition skin-blue sidebar-mini">
+		<div class="wrapper">
+
+			<%- include( './header.ejs' ) %>
+			
+			<%- include( './menu.ejs' ) %>
+
+			<!-- Content Wrapper. Contains page content -->
+			<div class="content-wrapper">
+				<!-- Content Header (Page header) -->
+				<section class="content-header">
+					<h1>珠宝添加页</h1>
+					<ol class="breadcrumb">
+						<li>
+							<a href="#"><i class="fa fa-dashboard"></i> Level</a>
+						</li>
+						<li class="active">Here</li>
+					</ol>
+				</section>
+
+				<!-- Main content -->
+				<section class="content">
+					<!-- Your Page Content Here -->					
+					<div class="box box-info">
+					    <div class="box-header with-border">
+					        <h3 class="box-title">编辑商品信息</h3>
+					    </div>
+					    <!-- /.box-header -->
+					    <!-- form start -->
+					    <form class="form-horizontal" method="post"  action="/addJewelryAction">
+					        <div class="box-body">
+					            <div class="form-group">
+					                <label class="col-sm-2 control-label">栏目</label>
+					                <div class="col-sm-4">
+					                    <select class="form-control select2 select2-hidden-accessible"  tabindex="-1" aria-hidden="true">
+					                        <option selected="selected">Jewelry</option>
+					                        <option>Watch</option>
+					                        <option>Delaware</option>
+					                        <option>Tennessee</option>
+					                        <option>Texas</option>
+					                        <option>Washington</option>
+					                    </select>
+					                </div>
+					
+					            </div>
+					            <div class="form-group">
+					                <label for="ProID" class="col-sm-2 control-label">ID</label>
+					
+					                <div class="col-sm-6">
+					                    <input type="text" class="form-control" name="id" id="ProID" >
+					                </div>
+					            </div>
+					            <div class="form-group">
+					                <label for="ProBranch" class="col-sm-2 control-label">品牌</label>
+					
+					                <div class="col-sm-6">
+					                    <input type="text" class="form-control"  name="brand" id="ProBranch">
+					                </div>
+					            </div>
+					            
+					            <div class="form-group">
+					                <label for="ProPrice" class="col-sm-2 control-label"  >价格</label>
+					
+					                <div class="col-sm-6">
+					                    <input type="text" class="form-control" id="ProPrice" name="price">
+					                </div>
+					            </div>
+					            <!--<div class="form-group">
+					                <label for="inputActivePrice" class="col-sm-2 control-label">活动价格</label>
+					
+					                <div class="col-sm-6">
+					                    <input type="text" class="form-control" id="inputActivePrice">
+					                </div>
+					            </div>-->
+					            <div class="form-group">
+					                <label for="ProImg" class="col-sm-2 control-label">商品图片</label>
+					
+					                <div class="col-sm-6">
+					                    <input type="url" class="form-control" id="ProImg" multiple name="img">
+					                </div>
+					            </div>
+					            <div class="form-group">
+					                <label class="col-sm-2 control-label">产品描述</label>
+					                <div class="col-sm-10">
+					                    <textarea class="form-control" id="description" name="info" rows="5" placeholder="Enter ..." style="resize: none;width: 697.80px;"></textarea>
+					                </div>
+					            </div>			            
+					        </div>
+					        <div class="box-footer">
+					        	<label for="inputEmail3" class="col-sm-2 control-label sr-only">Email</label>
+					        	<button type="submit" class="btn btn-info">添加</button>
+					            <button class="btn btn-default">返回</button>			            
+					        </div>
+					    </form>
+					        <!-- /.box-body -->
+					
+					        <!-- /.box-footer -->
+					
+					</div>
+				</section>
+				<!-- /.content -->
+			</div>
+			<!-- /.content-wrapper -->
+
+			<%- include( './footer.ejs' ) %>
+
+			<%- include( './sidebar.ejs' ) %>
+		</div>
+	</body>
+    <script src = "/javascripts/jquery.min.js" ></script>
+    <script src = "/bootstrap/js/bootstrap.min.js" ></script>
+    <script src = "/javascripts/app.min.js" ></script>
+</html>

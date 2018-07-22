@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>轮播图列表</title>
+		<meta name="referrer" content="no-referrer">
+		<link rel = 'stylesheet' href = '/bootstrap/css/bootstrap.min.css' />
+		<link rel = 'stylesheet' href = '/stylesheets/font-awesome.min.css' />
+		<link rel = 'stylesheet' href = '/stylesheets/ionicons.min.css' />
+		<link rel = 'stylesheet' href = '/admin-lte/dist/css/AdminLTE.min.css' />
+		<link rel = 'stylesheet' href = '/admin-lte/dist/css/skins/skin-blue.min.css' />
+	</head>
+		</style>
+	<body class="hold-transition skin-blue sidebar-mini">
+		<div class="wrapper">
+
+			<%- include( './header.ejs' ) %>
+			
+			<%- include( './menu.ejs' ) %>
+
+			<!-- Content Wrapper. Contains page content -->
+			<div class="content-wrapper">
+				<!-- Content Header (Page header) -->
+				<section class="content-header">
+					<h1>轮播图列表</h1>
+					<ol class="breadcrumb">
+						<li>
+							<a href="#"><i class="fa fa-dashboard"></i> Level</a>
+						</li>
+						<li class="active">Here</li>
+					</ol>
+				</section>
+
+				<!-- Main content -->
+				<section class="content">
+					<!-- Your Page Content Here -->
+					<div class="box">
+						<div class="box-header">
+							<a href="/bannerAddRoute"><button class="btn btn-xs btn-success">添加图片</button></a>
+						</div>
+						<!-- /.box-header -->
+						<div class="box-body no-padding">
+							<table class="table table-striped">
+								<tr>
+									<th>#序号</th>
+									<th>轮播图ID</th>
+									<th>链接地址</th>
+									<th>轮播图</th>
+									<th>操作</th>
+								</tr>
+								<% for ( var i = 0; i < len; i ++ ) { %>
+									<tr>
+										<td><%= i+1 %></td>
+										<td><%= result[i].bannerId %></td>
+										<td><%= result[i].bannerUrl %></td>
+										<td>
+											<img src="<%= result[i].bannerUrl %>" alt="" style="height: 100px; width: auto;" />
+										</td>
+										<td>
+											<button class="btn btn-xs btn-warning" >修改</button>
+											<button class="btn btn-xs btn-danger" >删除</button>
+										</td>
+									</tr>
+								<% } %>																
+							</table>
+						</div>
+						<!-- /.box-body -->
+					</div>
+				</section>
+				<!-- /.content -->
+			</div>
+			<!-- /.content-wrapper -->
+
+			<%- include( './footer.ejs' ) %>
+
+			<%- include( './sidebar.ejs' ) %>
+		</div>
+	</body>
+    <script src = "/javascripts/jquery.min.js" ></script>
+    <script src = "/bootstrap/js/bootstrap.min.js" ></script>
+    <script src = "/javascripts/app.min.js" ></script>
+</html>

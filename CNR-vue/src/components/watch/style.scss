@@ -1,0 +1,11 @@
+@import "@/lib/reset.scss";
+.mint-swipe{
+    @include rect(100%, 2rem);
+    padding-top: 0.04rem;
+    img{
+        @include rect(auto, 2rem);      
+    }
+    .mint-swipe-item{
+        padding-left: 0.875rem;
+    }
+}

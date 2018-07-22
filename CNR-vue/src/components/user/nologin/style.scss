@@ -1,0 +1,13 @@
+@import "@/lib/reset.scss";
+
+.registerBtn, .loginBtn{
+    @include rect(98%, 0.5rem);
+    @include background-color(#00FFF8);
+    @include margin(0.1rem 1%);
+    @include text-align();
+    @include line-height(0.5rem);
+    @include text-color(#fff);
+    @include font-weight();
+    @include font-size(0.2rem);
+}
+

@@ -1,0 +1,18 @@
+@import "@/lib/reset.scss";
+
+.pro{
+        @include rect(100%, 0.5rem);
+        @include background-color(#ccc);
+        @include border(1px 0 0 0, #ddd, solid);
+        ul{
+            @include rect(100%, 100%);
+            @include flexbox();
+            li{
+                @include flex();
+                @include rect(auto, 100%);
+                @include flexbox();
+                @include justify-content();
+                @include line-height(0.5rem);
+            }
+        }
+}

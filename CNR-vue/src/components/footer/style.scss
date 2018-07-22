@@ -1,0 +1,4 @@
+@import "@/lib/reset.scss";
+.router-link-exact-active, .router-link-active {
+    @include text-color(#f66);
+}
